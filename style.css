@@ -1,0 +1,19 @@
+body {
+    background-color: #121212;
+    font-family: 'Courier New', Courier, monospace ;
+    color: azure;
+}
+
+.title {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.click-btn {
+    background-color: #202020;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace ;
+    color: azure;
+    height: 5%;
+}
