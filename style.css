@@ -13,8 +13,7 @@ progress::-webkit-progress-value {
 }
 
 .center {
-    padding-top: 5px;
-    padding-bottom: 3px;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -41,19 +40,66 @@ progress::-webkit-progress-value {
 	box-shadow: 0px 0px 10px #777777;
 }
 
+.upgrades {
+    display: non;
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.amount-btn {
+    background-color: azure;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace ;
+    color: #303030;
+    height: 35px;
+    width: 58px;
+}
+
+.frame-upgrade{
+    height: 35px; 
+    width: 420px; 
+    position: relative;
+    background-color: #303030;
+    margin-top: 2%;
+}
+
 .click-btn {
     background-color: #303030;
     font-size: large;
     font-family: 'Courier New', Courier, monospace ;
     color: azure;
-    height: 5%;
+    height: 35px;
+}
+
+.menu-btn {
+    background-color: #303030;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace ;
+    color: azure;
+    height: 35px;
+    width: 15%;
+    margin-left: 20px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #666666;
+  color: #b4b4b4;
 }
 
 .storage {
     background-color: #303030;
     height: 20px;
-    width: 200px;
+    width: 300px;
 }
+
+.row {
+    display: flex;
+    position: relative;
+  }
 
 @keyframes animatetop {
     from {top: -300; opacity: 0}
