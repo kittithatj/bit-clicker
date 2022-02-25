@@ -17,13 +17,13 @@
         </div>
 
         <div class="center" style="padding-top: 2%;">
-            <button class="menu-btn">Storage</button>
-            <button class="menu-btn" disabled="true">Processor</button>
-            <button class="menu-btn" disabled="true">Data Research</button>
-            <button class="menu-btn" disabled="true">Data Revise</button>
+            <button class="menu-btn" onclick="menuDisplay(storageMenu)">Storage</button>
+            <button class="menu-btn" onclick="menuDisplay(processorMenu)">Processor</button>
+            <button class="menu-btn" onclick="menuDisplay(researchMenu)">Data Research</button>
+            <button class="menu-btn" onclick="menuDisplay(reviseMenu)">Data Revise</button>
         </div>
 
-        <div id="storage-menu" style="display: contents;">
+        <div id="storage-menu" style="display: none;">
             <div class="upgrades">
 
                 <div class="row">
@@ -31,6 +31,9 @@
                         <button class="amount-btn" style="position: absolute; left: 0; font-weight: bold;" id="punch-card-am"></button>
                         <b style="position: absolute; left: 65; bottom: 7;">[Punch Card]</b>
                         <button class="click-btn" style="position: absolute; right: 0;" id="punch-card-up" onclick="punchCardUpgrade()">Upgarde</button>
+                    </div>
+                    <div class="frame-upgrade" style="background-color: #121212; width: 130px; color: rgb(255, 255, 123);">
+                        <span style="position: absolute; left: 20; bottom: 7;">+ 64 Bit</span>
                     </div>
                     <div class="frame-upgrade" style="background-color: #121212 ;">
                         <span style="position: absolute; left: 20; bottom: 7;" id="punch-card-cost"></span>
@@ -43,6 +46,9 @@
                         <b style="position: absolute; left: 65; bottom: 7;">[Magnetic Drum]</b>
                         <button class="click-btn" style="position: absolute; right: 0;" id="punch-card-up" onclick="mntDrumUpgrade()">Upgarde</button>
                     </div>
+                    <div class="frame-upgrade" style="background-color: #121212; width: 130px; color: rgb(255, 255, 123);">
+                        <span style="position: absolute; left: 20; bottom: 7;">+ 1024 Bit</span>
+                    </div>
                     <div class="frame-upgrade" style="background-color: #121212 ;">
                         <span style="position: absolute; left: 20; bottom: 7;" id="mnt-drum-cost"></span>
                     </div>
@@ -51,19 +57,57 @@
             </div>
         </div>
 
-        <div class="upgrades" id="processor-menu">
-            <div class="upgrades"></div>
+        <div id="processor-menu" style="display: none;">
+            <div class="upgrades">
+
+                <span id="bit-per-sec">You are getting 0 Bit/second</span><br>
+                <span id="bit-per-click">You are getting 0 Bit/click</span>
+
+                <div class="row">
+                    <div class="frame-upgrade" >
+                        <button class="amount-btn" style="position: absolute; left: 0; font-weight: bold;" id="ram-am"></button>
+                        <b style="position: absolute; left: 65; bottom: 7;">[RAM]</b>
+                        <button class="click-btn" style="position: absolute; right: 0;" id="punch-card-up" onclick="ramUpgrade()">Upgarde</button>
+                    </div>
+                    <div class="frame-upgrade" style="background-color: #121212; width: 150px; color: rgb(123, 255, 130);">
+                        <span style="position: absolute; left: 20; bottom: 7;">+ 1 Bit/click</span>
+                    </div>
+                    <div class="frame-upgrade" style="background-color: #121212 ;">
+                        <span style="position: absolute; left: 20; bottom: 7;" id="ram-cost"></span>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <div class="frame-upgrade" >
+                        <button class="amount-btn" style="position: absolute; left: 0; font-weight: bold;" id="trans-am"></button>
+                        <b style="position: absolute; left: 65; bottom: 7;">[Transistor]</b>
+                        <button class="click-btn" style="position: absolute; right: 0;" id="punch-card-up" onclick="transUpgrade()">Upgarde</button>
+                    </div>
+                    <div class="frame-upgrade" style="background-color: #121212; width: 150px; color: rgb(123, 255, 130);">
+                        <span style="position: absolute; left: 20; bottom: 7;">+ 1 Bit/sec</span>
+                    </div>
+                    <div class="frame-upgrade" style="background-color: #121212 ;">
+                        <span style="position: absolute; left: 20; bottom: 7;" id="trans-cost"></span>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <div class="upgrades" id="research-menu">
-            <div class="upgrades"></div>
+        <div id="research-menu" style="display: none;">
+            <div class="upgrades">
+                Data Research will be update...
+            </div>
         </div>
 
-        <div class="upgrades" id="revise-menu">
-            <div class="upgrades"></div>
+        <div id="revise-menu" style="display: none;">
+            <div class="upgrades">
+                Data Revise will be update...
+            </div>
         </div>
 
         <script src="./script/main.js"></script>
+        <script src="./script/menu.js"></script>
     </body>
     
 </html>
