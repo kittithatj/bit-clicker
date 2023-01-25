@@ -98,8 +98,8 @@ function processorUpdate(){
     TransAmount.innerHTML = `${transistor.amount}`
     TransCost.innerHTML = `Cost : ${transistor.cost} Bit`
 
-    BpcDisplay.innerHTML = `You are getting ${bitPerClick} Bit/second`;
-    BpsDisplay.innerHTML = `You are getting ${bitPerSec} Bit/click`;
+    BpcDisplay.innerHTML = `You are getting ${bitPerClick} Bit/click`;
+    BpsDisplay.innerHTML = `You are getting ${bitPerSec} Bit/second`;
 }
 
 function getStorage(){
